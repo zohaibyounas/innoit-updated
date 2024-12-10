@@ -1,9 +1,9 @@
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
-import Header from "@/modules/components/layout/Header";
-import Footer from "@/modules/components/layout/Footer";
-import ScrollProgress from "@/modules/components/layout/ScrollProgress";
-import CustomScripts from "@/modules/scripts/CustomScripts";
+import Header from "@/app/modules/components/layout/Header";
+import Footer from "@/app/modules/components/layout/Footer";
+import ScrollProgress from "@/app/modules/components/layout/ScrollProgress";
+import CustomScripts from "@/app/modules/scripts/CustomScripts";
 
 // If loading a variable font, you don't need to specify the font weight
 const inter = Inter({ subsets: ["latin"] });
