@@ -21,11 +21,8 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/email", formData, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios.post("/api/email", formData);
+      console.log(response.data);
 
       // Axios automatically handles the response in the form of data
       alert("Message sent successfully!");
