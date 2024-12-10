@@ -27,7 +27,7 @@ const Contact = () => {
         },
       });
 
-      const data = await response.json(); // Read the response from the server
+      //  const data = await response.json(); // Read the response from the server
 
       if (response.ok) {
         alert("Message sent successfully!");
