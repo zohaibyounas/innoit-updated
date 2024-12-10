@@ -21,12 +21,10 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post("/api/email", {
-        method: "POST",
+      const response = await axios.post("/api/email", formData, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
       });
 
       const data = await response.json(); // Read the response from the server
