@@ -1,4 +1,5 @@
 "use client";
+import axios from "axios";
 import React, { useState } from "react";
 
 const Contact = () => {
@@ -20,7 +21,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("/api/email", {
+      const response = await axios.post("/api/email", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
