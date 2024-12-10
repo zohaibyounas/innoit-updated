@@ -27,16 +27,11 @@ const Contact = () => {
         },
       });
 
-      //  const data = await response.json(); // Read the response from the server
-
-      if (response.ok) {
-        alert("Message sent successfully!");
-        setFormData({ name: "", email: "", message: "" });
-      } else {
-        alert(`Error sending message: ${data.message || "Unknown error"}`);
-      }
+      // Axios automatically handles the response in the form of data
+      alert("Message sent successfully!");
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      console.error("Error occurred during fetch:", error);
+      console.error("Error occurred during the request:", error);
       alert("There was an error sending the message. Please try again.");
     }
   };
