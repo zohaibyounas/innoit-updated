@@ -93,15 +93,34 @@ const Contact = () => {
             <div className="col-md-6 col-lg-6">
               <div
                 className="p-4"
-                style={{ backgroundColor: "lightgray", borderRadius: "8px" }}
+                style={{
+                  backgroundColor: "#f2f2f2", // Light gray background
+                  borderRadius: "8px",
+                  padding: "30px",
+                  boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
+                }}
               >
-                <div className="text-center mb-4 fw-bold">
-                  <span className="text-black">Contact Now!</span>
+                <div className="text-center mb-4">
+                  <span
+                    className="text-white"
+                    style={{
+                      fontSize: "22px", // Larger font size for the heading
+                      fontWeight: "bold",
+                      color: "#fff",
+                      backgroundColor: "#264d73", // Dark blue background color
+                      padding: "15px", // Padding to match the style in the image
+                      borderRadius: "8px",
+                      display: "block", // Ensures the span takes the full width
+                      width: "100%", // Full width like in the image
+                    }}
+                  >
+                    Contact Now!
+                  </span>
                 </div>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label text-black">
-                      Name
+                      First Name
                     </label>
                     <input
                       type="text"
@@ -111,11 +130,12 @@ const Contact = () => {
                       value={formData.name}
                       onChange={handleInputChange}
                       required
+                      style={{ borderRadius: "8px", padding: "10px" }}
                     />
                   </div>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label text-black">
-                      Email
+                      Work Email
                     </label>
                     <input
                       type="email"
@@ -125,6 +145,7 @@ const Contact = () => {
                       value={formData.email}
                       onChange={handleInputChange}
                       required
+                      style={{ borderRadius: "8px", padding: "10px" }}
                     />
                   </div>
                   <div className="mb-3">
@@ -139,13 +160,22 @@ const Contact = () => {
                       onChange={handleInputChange}
                       rows="4"
                       required
+                      style={{ borderRadius: "8px", padding: "10px" }}
                     ></textarea>
                   </div>
                   <div className="text-center">
                     <button
                       type="submit"
-                      className="bg-black text-white rounded w-100"
+                      className="btn w-100"
                       disabled={isSending}
+                      style={{
+                        backgroundColor: "#ff6f3c", // Orange button background
+                        color: "#fff",
+                        padding: "15px", // Increased padding to match the image
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                        borderRadius: "8px",
+                      }}
                     >
                       {isSending ? "Sending..." : "Send Message"}
                     </button>
