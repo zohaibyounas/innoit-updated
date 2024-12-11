@@ -108,8 +108,8 @@ const Contact = () => {
                       fontWeight: "bold",
                       color: "#fff",
                       backgroundColor: "#264d73", // Dark blue background color
-                      padding: "15px", // Padding to match the style in the image
-                      borderRadius: "8px",
+                      padding: "10px", // Padding to match the style in the image
+                      // borderRadius: "8px",
                       display: "block", // Ensures the span takes the full width
                       width: "100%", // Full width like in the image
                     }}
