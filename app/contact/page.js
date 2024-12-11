@@ -120,7 +120,7 @@ const Contact = () => {
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label text-black">
-                      First Name
+                      Name
                     </label>
                     <input
                       type="text"
@@ -135,7 +135,7 @@ const Contact = () => {
                   </div>
                   <div className="mb-3">
                     <label htmlFor="email" className="form-label text-black">
-                      Work Email
+                      Email
                     </label>
                     <input
                       type="email"
