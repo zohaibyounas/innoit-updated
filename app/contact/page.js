@@ -60,6 +60,102 @@ const Contact = () => {
           height: "1rem",
         }}
       ></section>
+      <section className="p-0 mt-4">
+        <div className="container">
+          <div className="row justify-content-center">
+            {/* Left Section with Business Text */}
+            <div className="col-md-6 col-lg-6">
+              <div className="p-4">
+                <h6 className="text-black">
+                  End-to-End Solutions for Business Optimization with Innoit
+                </h6>
+                <p className="text-black">
+                  Our comprehensive suite of business solutions seamlessly
+                  integrates essential operations, from customer relationship
+                  management to payroll systems, POS, logistics, and
+                  communication tools. With features like Weight Bridge
+                  Integration, WhatsApp Integration, and advanced Email Caster,
+                  we provide the tools to enhance your workflow, streamline
+                  processes, and boost communication across your organization.
+                </p>
+                <p className="text-black">
+                  Our solutions can help you optimize operations, improve
+                  customer relationships, and enhance productivity with SAP
+                  Business One integration. Learn how our platform empowers
+                  businesses with real-time analytics, mobile apps, and secure
+                  payment processing to manage your operations anytime,
+                  anywhere.
+                </p>
+              </div>
+            </div>
+
+            {/* Right Section with Contact Form */}
+            <div className="col-md-6 col-lg-6">
+              <div
+                className="p-4"
+                style={{ backgroundColor: "lightgray", borderRadius: "8px" }}
+              >
+                <div className="text-center mb-4 fw-bold">
+                  <span className="text-black">Contact Now!</span>
+                </div>
+                <form onSubmit={handleSubmit}>
+                  <div className="mb-3">
+                    <label htmlFor="name" className="form-label text-black">
+                      Name
+                    </label>
+                    <input
+                      type="text"
+                      className="form-control text-black"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="email" className="form-label text-black">
+                      Email
+                    </label>
+                    <input
+                      type="email"
+                      className="form-control text-black"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      required
+                    />
+                  </div>
+                  <div className="mb-3">
+                    <label htmlFor="message" className="form-label text-black">
+                      Message
+                    </label>
+                    <textarea
+                      className="form-control text-black"
+                      id="message"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      rows="4"
+                      required
+                    ></textarea>
+                  </div>
+                  <div className="text-center">
+                    <button
+                      type="submit"
+                      className="bg-black text-white rounded w-100"
+                      disabled={isSending}
+                    >
+                      {isSending ? "Sending..." : "Send Message"}
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section>
         <div className="container">
           <div className="row">
@@ -128,84 +224,6 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="p-0">
-        <div className="container">
-          <div className="row justify-content-center">
-            <h4 className="text-center text-black">Get in touch with us</h4>
-            <div className="row">
-              {/* Left Column */}
-              <div className="col-md-6 d-flex flex-column align-items-start">
-                <div className="mb-3 w-100">
-                  <label htmlFor="name" className="form-label text-black">
-                    Name
-                  </label>
-                  <input
-                    type="text"
-                    className="form-control"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <div className="mb-3 w-100">
-                  <label htmlFor="email" className="form-label text-black">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    className="form-control"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    required
-                  />
-                </div>
-                <p className="text-black mt-4">
-                  We are committed to protecting your privacy. We will never
-                  collect information about you without your explicit consent.
-                </p>
-              </div>
-
-              {/* Right Column */}
-              <div className="col-md-6 d-flex flex-column align-items-end">
-                <form
-                  onSubmit={handleSubmit}
-                  className="w-100"
-                  onChange={() => toast.dismiss()}
-                >
-                  <div className="mb-3">
-                    <label htmlFor="message" className="form-label text-black">
-                      Message
-                    </label>
-                    <textarea
-                      className="form-control"
-                      id="message"
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      rows="5"
-                      required
-                    ></textarea>
-                  </div>
-                  <div className="mb-3 text-end">
-                    <button
-                      type="submit"
-                      className="btn btn-medium btn-dark-gray btn-rounded btn-switch-text btn-box-shadow p-2"
-                      disabled={isSending}
-                    >
-                      {isSending ? "Sending..." : "Send Message"}
-                    </button>
-                  </div>
-                </form>
               </div>
             </div>
           </div>
