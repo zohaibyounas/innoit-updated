@@ -1,42 +1,60 @@
 "use client";
-import axios from "axios";
 import React, { useState } from "react";
+import emailjs from "emailjs-com";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Contact = () => {
+  const [error, setError] = useState(false);
+  const [success, setSuccess] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+  // Handle form submission to send an email via EmailJS
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setIsSending(true);
+
+    emailjs
+      .sendForm(
+        "service_yrj3mhl", // Your EmailJS Service ID
+        "template_ztkysnn", // Your EmailJS Template ID
+        e.target,
+        "JhzwSHTeL-tHdRkA3" // Your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          setSuccess(true);
+          setError(false);
+          setIsSending(false);
+          setFormData({ name: "", email: "", message: "" }); // Clear all state fields
+          toast.success("Your message has been sent successfully!");
+        },
+        (error) => {
+          setSuccess(false);
+          setError(true);
+          setIsSending(false);
+          console.error("Error sending email:", error);
+          toast.error(
+            "There was an error sending your message. Please try again."
+          );
+        }
+      );
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      const response = await axios.post("/api/email", formData);
-      console.log(response.data);
-
-      // Axios automatically handles the response in the form of data
-      alert("Message sent successfully!");
-      setFormData({ name: "", email: "", message: "" });
-    } catch (error) {
-      console.error("Error occurred during the request:", error);
-      alert("There was an error sending the message. Please try again.");
-    }
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
   };
 
   return (
     <>
+      <ToastContainer position="top-center" autoClose={3000} />
       <section
-        // className=""
         style={{
           backgroundImage: "url(images/hosting-pricing-bg.jpg)",
           height: "1rem",
@@ -62,7 +80,6 @@ const Contact = () => {
                 </li>
               </ul>
               <div className="tab-content">
-                {/* start tab content */}
                 <div className="tab-pane fade in active show" id="tab_five1">
                   <div className="row align-items-center justify-content-center">
                     <div className="col-lg-5 col-md-6 sm-mb-30px">
@@ -77,9 +94,9 @@ const Contact = () => {
                         Third Floor, Amjad plaza
                       </span>
                       <p className="text-black">
-                        plaza, Bank Rd, Saddar
+                        Bank Rd, Saddar
                         <br />
-                        Rawalpindi, Punjab 46000
+                        Rawalpindi, Punjab 46000
                       </p>
 
                       <span className="d-block mb-30px">
@@ -88,7 +105,7 @@ const Contact = () => {
                           className="text-black"
                           href="mailto:info@yourdomain.com"
                         >
-                          Info@innoit.org{" "}
+                          Info@innoit.org
                         </a>
                       </span>
                       <a
@@ -111,129 +128,60 @@ const Contact = () => {
                     </div>
                   </div>
                 </div>
-
-                <div className="tab-pane fade in" id="tab_five3">
-                  <div className="row align-items-center justify-content-center">
-                    <div className="col-lg-5 col-md-6 sm-mb-30px">
-                      <img
-                        src="https://via.placeholder.com/457x350"
-                        alt=""
-                        className="w-100 border-radius-6px"
-                      />
-                    </div>
-                  </div>
-                </div>
-                {/* end tab content */}
-                {/* start tab content */}
-                <div className="tab-pane fade in" id="tab_five4">
-                  <div className="row align-items-center justify-content-center">
-                    <div className="col-lg-5 col-md-6 sm-mb-30px">
-                      <img
-                        src="https://via.placeholder.com/457x350"
-                        alt=""
-                        className="w-100 border-radius-6px"
-                      />
-                    </div>
-                    <div className="col-lg-4 col-md-5 offset-md-1 text-center text-md-start">
-                      <span className="text-dark-gray fs-18 fw-600 ls-minus-05px">
-                        Crafto - Switzerland
-                      </span>
-                      <p>
-                        701 sondanella, 24th Floor,
-                        <br />
-                        Günsberg, Switzerland
-                      </p>
-                      <span className="d-block">
-                        <span className="text-dark-gray fw-600">T:</span>
-                        <a href="tel:1234567890"> 123 456 7890</a>
-                      </span>
-                      <span className="d-block mb-30px">
-                        <span className="text-dark-gray fw-600">Email:</span>{" "}
-                        <a href="mailto:info@yourdomain.com">
-                          info@yourdomain.com
-                        </a>
-                      </span>
-                      <a
-                        href="https://www.google.com/maps?ll=-37.805688,144.962312&z=17&t=m&hl=en-US&gl=IN&mapclient=embed&cid=13153204942596594449"
-                        target="_blank"
-                        className="btn btn-medium btn-dark-gray btn-rounded btn-switch-text btn-box-shadow"
-                      >
-                        <span>
-                          <span
-                            className="btn-double-text"
-                            data-text="Get directions"
-                          >
-                            Get directions
-                          </span>
-                          <span>
-                            <i className="feather icon-feather-arrow-right" />
-                          </span>
-                        </span>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {/* end tab content */}
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* end section */}
-      {/* start section */}
+
       <section className="p-0">
         <div className="container">
           <div className="row justify-content-center">
             <h4 className="text-center text-black">Get in touch with us</h4>
             <div className="row">
-              <div className="col-md-6">
-                <form onSubmit={handleSubmit}>
-                  {/* Name Input */}
-                  <div className="mb-3">
-                    <label htmlFor="name" className="form-label text-black">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="name"
-                      name="name"
-                      value={formData.name}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-
-                  {/* Email Input */}
-                  <div className="mb-3">
-                    <label htmlFor="email" className="form-label text-black">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="email"
-                      name="email"
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      required
-                    />
-                  </div>
-
-                  {/* Privacy Text */}
-                  <div className="mb-3 text-black">
-                    <p className="text-sm">
-                      We are committed to protecting your privacy. We will never
-                      collect information about you without your explicit
-                      consent.
-                    </p>
-                  </div>
-                </form>
+              {/* Left Column */}
+              <div className="col-md-6 d-flex flex-column align-items-start">
+                <div className="mb-3 w-100">
+                  <label htmlFor="name" className="form-label text-black">
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <div className="mb-3 w-100">
+                  <label htmlFor="email" className="form-label text-black">
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                  />
+                </div>
+                <p className="text-black mt-4">
+                  We are committed to protecting your privacy. We will never
+                  collect information about you without your explicit consent.
+                </p>
               </div>
 
-              <div className="col-md-6">
-                <form onSubmit={handleSubmit}>
-                  {/* Message Textarea */}
+              {/* Right Column */}
+              <div className="col-md-6 d-flex flex-column align-items-end">
+                <form
+                  onSubmit={handleSubmit}
+                  className="w-100"
+                  onChange={() => toast.dismiss()}
+                >
                   <div className="mb-3">
                     <label htmlFor="message" className="form-label text-black">
                       Message
@@ -248,14 +196,13 @@ const Contact = () => {
                       required
                     ></textarea>
                   </div>
-
-                  {/* Send Message Button */}
                   <div className="mb-3 text-end">
                     <button
                       type="submit"
                       className="btn btn-medium btn-dark-gray btn-rounded btn-switch-text btn-box-shadow p-2"
+                      disabled={isSending}
                     >
-                      Send Message
+                      {isSending ? "Sending..." : "Send Message"}
                     </button>
                   </div>
                 </form>
@@ -264,30 +211,6 @@ const Contact = () => {
           </div>
         </div>
       </section>
-
-      {/* end section */}
-      {/* start section */}
-      <section className="half-section">
-        <div className="container">
-          <div
-            className="row justify-content-center align-items-center"
-            data-anime='{ "translateY": [50, 0], "opacity": [0,1], "duration": 1200, "delay": 0, "staggervalue": 150, "easing": "easeOutQuad" }'
-          >
-            <div className="col-md-10 text-center">
-              <h6 className="text-dark-gray fw-500 mb-0 ls-minus-1px">
-                How can we help you today? Send a message at{" "}
-                <a
-                  href="mailto:info@domain.com"
-                  className="text-decoration-line-bottom text-dark-gray fw-700 text-black"
-                >
-                  info@innoit.org
-                </a>
-              </h6>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* end section */}
     </>
   );
 };
