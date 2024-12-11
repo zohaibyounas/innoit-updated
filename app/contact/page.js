@@ -94,7 +94,7 @@ const Contact = () => {
               <div
                 className="p-4"
                 style={{
-                  backgroundColor: "#f2f2f2", // Light gray background
+                  backgroundColor: "#E9EAEC", // Light gray background
                   borderRadius: "8px",
                   padding: "30px",
                   boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
