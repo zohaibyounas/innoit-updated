@@ -222,10 +222,11 @@ const Services = () => {
                   </div>
                   <div className="feature-box-content">
                     <span className="d-inline-block text-dark-gray fw-600 mb-5px fs-18 ls-minus-05px">
-                      Learning Management System (LMS):
+                      Library Management System (LMS):
                     </span>
                     <p className="text-black">
-                      Deliver and manage online training and e-learning courses.
+                      This application designed to manage and organize library
+                      resources and operations efficiently.
                     </p>
                   </div>
                   <div className="feature-box-overlay bg-base-color" />
