@@ -19,11 +19,18 @@ const Contact = () => {
     e.preventDefault();
     setIsSending(true);
 
+    // Prepare the data to send to the EmailJS template
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      message: formData.message,
+    };
+
     emailjs
-      .sendForm(
+      .send(
         "service_yrj3mhl", // Your EmailJS Service ID
         "template_ztkysnn", // Your EmailJS Template ID
-        e.target,
+        templateParams, // Pass form data here as an object
         "JhzwSHTeL-tHdRkA3" // Your EmailJS Public Key
       )
       .then(
@@ -55,13 +62,13 @@ const Contact = () => {
     <>
       <ToastContainer position="top-center" autoClose={3000} />
       <section
-        class="pricing-section"
+        className="pricing-section"
         style={{
           backgroundImage: "url(images/hosting-pricing-bg.jpg)",
         }}
       ></section>
 
-      <section className="p-0  mt-6 ">
+      <section className="p-0 mt-6">
         <div className="container">
           <div className="row justify-content-center">
             {/* Left Section with Business Text */}
@@ -91,7 +98,6 @@ const Contact = () => {
             </div>
 
             {/* Right Section with Contact Form */}
-
             <div className="col-md-6 col-lg-6">
               <div className="text-center ">
                 <span
@@ -128,7 +134,7 @@ const Contact = () => {
                       type="text"
                       className="form-control text-black"
                       id="name"
-                      name="name"
+                      name="name" // Matches the dynamic variable in the template
                       value={formData.name}
                       onChange={handleInputChange}
                       required
@@ -143,7 +149,7 @@ const Contact = () => {
                       type="email"
                       className="form-control text-black"
                       id="email"
-                      name="email"
+                      name="email" // Matches the dynamic variable in the template
                       value={formData.email}
                       onChange={handleInputChange}
                       required
@@ -157,7 +163,7 @@ const Contact = () => {
                     <textarea
                       className="form-control text-black"
                       id="message"
-                      name="message"
+                      name="message" // Matches the dynamic variable in the template
                       value={formData.message}
                       onChange={handleInputChange}
                       rows="4"
