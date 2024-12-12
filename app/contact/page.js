@@ -237,7 +237,7 @@ const Contact = () => {
                         </a>
                       </span>
                       <a
-                        href=" https://g.co/kgs/YjHcn1U "
+                        href=" https://maps.app.goo.gl/kdAtcEbsFr121JpF7 "
                         target="_blank"
                         className="btn btn-medium btn-dark-gray btn-rounded btn-switch-text btn-box-shadow"
                       >
