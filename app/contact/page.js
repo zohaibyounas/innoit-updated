@@ -90,33 +90,34 @@ const Contact = () => {
             </div>
 
             {/* Right Section with Contact Form */}
+
             <div className="col-md-6 col-lg-6">
+              <div className="text-center ">
+                <span
+                  className="text-white"
+                  style={{
+                    fontSize: "20px", // Larger font size for the heading
+                    fontWeight: "bold",
+                    color: "#fff",
+                    backgroundColor: "#264d73", // Dark blue background color
+                    padding: "10px", // Padding to match the style in the image
+                    // borderRadius: "8px",
+                    display: "block", // Ensures the span takes the full width
+                    width: "100%", // Full width like in the image
+                  }}
+                >
+                  Contact Now!
+                </span>
+              </div>
               <div
                 className="p-4"
                 style={{
                   backgroundColor: "#E9EAEC", // Light gray background
-                  borderRadius: "8px",
+                  // borderRadius: "8px",
                   padding: "30px",
                   boxShadow: "0px 4px 6px rgba(0, 0, 0, 0.1)",
                 }}
               >
-                <div className="text-center mb-4">
-                  <span
-                    className="text-white"
-                    style={{
-                      fontSize: "22px", // Larger font size for the heading
-                      fontWeight: "bold",
-                      color: "#fff",
-                      backgroundColor: "#264d73", // Dark blue background color
-                      padding: "10px", // Padding to match the style in the image
-                      // borderRadius: "8px",
-                      display: "block", // Ensures the span takes the full width
-                      width: "100%", // Full width like in the image
-                    }}
-                  >
-                    Contact Now!
-                  </span>
-                </div>
                 <form onSubmit={handleSubmit}>
                   <div className="mb-3">
                     <label htmlFor="name" className="form-label text-black">
