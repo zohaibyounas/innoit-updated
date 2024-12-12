@@ -55,20 +55,21 @@ const Contact = () => {
     <>
       <ToastContainer position="top-center" autoClose={3000} />
       <section
+        class="pricing-section"
         style={{
           backgroundImage: "url(images/hosting-pricing-bg.jpg)",
-          height: "1rem",
         }}
       ></section>
-      <section className="p-0 mt-4">
+
+      <section className="p-0  mt-6 ">
         <div className="container">
           <div className="row justify-content-center">
             {/* Left Section with Business Text */}
             <div className="col-md-6 col-lg-6">
               <div className="p-4">
-                <h6 className="text-black">
+                <h5 className="text-black fw-600">
                   End-to-End Solutions for Business Optimization with Innoit
-                </h6>
+                </h5>
                 <p className="text-black">
                   Our comprehensive suite of business solutions seamlessly
                   integrates essential operations, from customer relationship

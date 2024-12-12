@@ -6,3 +6,9 @@
 /* @import url("/app/revolution/css/settings.css");
 @import url("/app/revolution/css/layers.css");
 @import url("/app/revolution/css/navigation.css"); */
+/* Hide the section on screens smaller than 600px */
+/* @media (max-width: 600px) {
+  .pricing-section {
+    display: none;
+  }
+} */
