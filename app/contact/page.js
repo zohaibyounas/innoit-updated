@@ -219,12 +219,12 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-4 col-md-5 offset-md-1 text-center text-md-start">
                       <span className="text-dark-gray fs-18 fw-600 ls-minus-05px">
-                        Third Floor, Amjad plaza
+                        First Floor, Zeeshan Arcade
                       </span>
                       <p className="text-black">
-                        Bank Rd, Saddar
+                        Office No, 2, Street 49, G-13/2
                         <br />
-                        Rawalpindi, Punjab 46000
+                        Islamabad, 44220
                       </p>
 
                       <span className="d-block mb-30px">

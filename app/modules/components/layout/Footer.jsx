@@ -105,8 +105,8 @@ const Footer = () => {
               </a> */}
               <span className="d-inline-flex w-100 text-white">Address</span>
               <div className="text-white lh-22 d-inline-flex">
-                Third Floor, Amjad plaza Bank Rd, Saddar Rawalpindi, Punjab
-                46000
+                First Floor, Zeeshan Arcade, Office No, 2, Street 49, G-13/2
+                Islamabad, 44220
               </div>
             </div>
           </div>
