@@ -75,13 +75,15 @@ const About = () => {
                 <h2 className="fw-700 text-dark-gray ls-minus-1px">
                   Our Mission
                 </h2>
-                <p className="w-95 lg-w-100 mb-30px text-black">
-                  At Innoit Pvt Ltd, our mission is simple: to help businesses
-                  streamline operations, optimize processes, and drive growth
-                  through the effective implementation of SAP Business One.
-                  Whether you are a growing company looking to implement SAP B1
-                  or an individual seeking to become a certified consultant, we
-                  are here to guide you every step of the way.
+                <p className="w-95 lg-w-100 mb-30px text-black uppercase">
+                  AT INNOIT PVT LTD, WE ARE PASSIONATE ABOUT HELPING BUSINESSES
+                  TRANSFORM, STREAMLINE, AND SUCCEED. WHETHER YOU’RE AN
+                  ORGANIZATION IN NEED OF ERP SOLUTIONS OR AN INDIVIDUAL AIMING
+                  TO BUILD A REWARDING CAREER IN SAP BUSINESS ONE, INNOIT PVT
+                  LTD IS HERE TO PROVIDE THE EXPERTISE AND GUIDANCE YOU NEED.
+                  EXPLORE OUR SERVICES, GET IN TOUCH WITH OUR EXPERT TEAM, OR
+                  JOIN OUR TRAINING PROGRAMS TODAY. LET’S BUILD A BETTER, MORE
+                  EFFICIENT FUTURE TOGETHER WITH SAP BUSINESS ONE!
                 </p>
               </div>
               <div className="mx-auto w-11/12 lg:w-8/12 py-12">

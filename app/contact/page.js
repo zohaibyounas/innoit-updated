@@ -225,12 +225,12 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-4 col-md-5 offset-md-1 text-center text-md-start">
                       <span className="text-dark-gray fs-18 fw-600 ls-minus-05px">
-                        First Floor, Zeeshan Arcade
+                        Third Floor, Amjad plaza
                       </span>
                       <p className="text-black">
-                        Office No, 2, Street 49, G-13/2
+                        Bank Rd, Saddar
                         <br />
-                        Islamabad, 44220
+                        Rawalpindi, Punjab 46000{" "}
                       </p>
 
                       <span className="d-block mb-30px">
@@ -243,7 +243,7 @@ const Contact = () => {
                         </a>
                       </span>
                       <a
-                        href=" https://maps.app.goo.gl/kdAtcEbsFr121JpF7 "
+                        href="  https://g.co/kgs/YjHcn1U "
                         target="_blank"
                         className="btn btn-medium btn-dark-gray btn-rounded btn-switch-text btn-box-shadow"
                       >

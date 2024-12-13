@@ -42,8 +42,8 @@ export default function Home() {
                   className="d-inline-block lh-32 "
                   data-anime='{ "translateY": [100, 0], "easing": "easeOutCubic", "duration": 900, "delay": 300 }'
                 >
-                  Rely on INNOIT Consultancy for professional, effective, and
-                  innovative solutions that accelerate your business growth.
+                  Rely on INNOIT Pvt Ltd for professional, effective, and
+                  innovative solutions that accelerate your business growth.
                 </span>
               </div>
               <div className="overflow-hidden pt-5px">
@@ -341,8 +341,8 @@ export default function Home() {
               className="col-lg-5 offset-lg-1 last-paragraph-no-margin"
               data-anime='{ "el": "childs", "opacity": [0, 1], "rotateY": [-90, 0], "rotateZ": [-10, 0], "translateY": [80, 0], "translateZ": [50, 0], "staggervalue": 200, "duration": 900, "delay": 300, "easing": "easeOutCirc" }'
             >
-              <span className="text-base-color fw-500 mb-15px text-uppercase d-block">
-                "Transform Your Business with SAP Business One Implementation
+              <span className="text-black  mb-15px ">
+                Transform Your Business with SAP Business One Implementation
                 Services" Unlock the full potential of your business with SAP
                 Business One, a leading ERP solution designed specifically for
                 small and midsize businesses. Streamline your operations,
