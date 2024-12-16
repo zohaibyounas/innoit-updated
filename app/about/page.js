@@ -76,14 +76,14 @@ const About = () => {
                   Our Mission
                 </h2>
                 <p className="w-95 lg-w-100 mb-30px text-black uppercase">
-                  AT INNOIT PVT LTD, WE ARE PASSIONATE ABOUT HELPING BUSINESSES
-                  TRANSFORM, STREAMLINE, AND SUCCEED. WHETHER YOU’RE AN
-                  ORGANIZATION IN NEED OF ERP SOLUTIONS OR AN INDIVIDUAL AIMING
-                  TO BUILD A REWARDING CAREER IN SAP BUSINESS ONE, INNOIT PVT
-                  LTD IS HERE TO PROVIDE THE EXPERTISE AND GUIDANCE YOU NEED.
-                  EXPLORE OUR SERVICES, GET IN TOUCH WITH OUR EXPERT TEAM, OR
-                  JOIN OUR TRAINING PROGRAMS TODAY. LET’S BUILD A BETTER, MORE
-                  EFFICIENT FUTURE TOGETHER WITH SAP BUSINESS ONE!
+                  At Innoit pvt Ltd, we are passionate about helping businesses
+                  transform, streamline, and succeed. whether you’re an
+                  organization in need of erp solutions or an individual aiming
+                  to build a rewarding career in sap business one, innoit pvt
+                  ltd is here to provide the expertise and guidance you need.
+                  explore our services, get in touch with our expert team, or
+                  join our training programs today. let’s build a better, more
+                  efficient future together with sap business one!
                 </p>
               </div>
               <div className="mx-auto w-11/12 lg:w-8/12 py-12">
@@ -269,7 +269,7 @@ const About = () => {
                 <h2 className="text-white fw-700 ls-minus-1px mb-0">
                   Join Us in Transforming Business Together
                 </h2>
-                <span className="d-block text-white opacity-5 text-uppercase mt-20px">
+                <span className="d-block text-white   mt-20px">
                   At Innoit Pvt Ltd, we are passionate about helping businesses
                   transform, streamline, and succeed. Whether you’re an
                   organization in need of ERP solutions or an individual aiming

@@ -28,8 +28,8 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_yrj3mhl", // Your EmailJS Service ID
-        "template_ztkysnn", // Your EmailJS Template ID
+        "service_i6v9jqy", // Your EmailJS Service ID
+        "template_re7dfun", // Your EmailJS Template ID
         templateParams, // Pass form data here as an object
         "JhzwSHTeL-tHdRkA3" // Your EmailJS Public Key
       )
